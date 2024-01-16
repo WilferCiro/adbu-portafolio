@@ -1,0 +1,68 @@
+---
+import IconUser from "../atoms/icons/IconUser.astro";
+import IconInfo from "../atoms/icons/IconInfo.astro";
+import SocialLinks from "../atoms/SocialLinks.astro";
+---
+
+<section>
+  <img
+    src="/img/adela-bustamante.jpeg"
+    alt="Foto de Adela Bustamante Alarcón"
+    id="primary-image"
+  />
+  <ul id="personal-data">
+    <li>
+      <label class="icon">
+        <IconUser />
+      </label>
+      <div class="info">
+        <label>Nombre</label>Adela Bustamante Alarcón
+        <label> Hola soy un cheeto y me gusta el helado y Odio a Wilfer</label>
+      </div>
+    </li>
+    <li>
+      <label class="icon"> <IconInfo /></label>
+      <div class="info">
+        <label>Info.</label>
+        Asistente de Marketing
+      </div>
+    </li>
+    <li>
+      <SocialLinks />
+    </li>
+  </ul>
+</section>
+
+<style>
+  section {
+    padding: 30px 40px;
+  }
+  #primary-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    display: block;
+    margin: auto;
+  }
+
+  #personal-data {
+    list-style: none;
+    padding: 0px;
+  }
+  #personal-data li {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+    color: var(--text-color1);
+  }
+  #personal-data li .icon {
+    color: var(--text-color2);
+  }
+
+  .info label {
+    color: var(--text-color3);
+    font-size: 13px;
+    display: block;
+  }
+</style>

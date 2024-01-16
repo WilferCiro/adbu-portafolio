@@ -1,0 +1,91 @@
+---
+import CustomHeader from '../components/molecules/CustomHeader.astro';
+import CustomFooter from '../components/molecules/CustomFooter.astro';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <CustomHeader />
+    <slot />
+    <CustomFooter />
+  </body>
+</html>
+<style is:global>
+  :root {
+    --primary-color: #1e8d7d;
+    --secondary-color: #135f55;
+    --accent-color: #2bd769;
+    --body-color: #4a5167;
+    --border-radius: 5px;
+
+    --bg-color1: rgb(240, 240, 240);
+    --bg-color2: rgb(219, 219, 219);
+    --bg-color2-opacity: rgba(219, 219, 219, 0.7);
+    --bg-color1-opacity: rgb(240, 240, 240, 0.7);
+    --shadow: rgba(150, 150, 150, 0.1);
+
+    --text-color1: #121818;
+    --text-color2: rgb(70, 70, 70);
+    --text-color3: #8496a0;
+
+    --border-color: rgba(179, 179, 179, 0.8);
+
+    --blur-size: 10px;
+  }
+
+  html[data-theme="light"] {
+    --bg-color1: rgb(240, 240, 240);
+    --bg-color2: rgb(219, 219, 219);
+    --bg-color2-opacity: rgba(219, 219, 219, 0.7);
+    --bg-color1-opacity: rgb(240, 240, 240, 0.7);
+    --shadow: rgba(150, 150, 150, 0.1);
+
+    --text-color1: #121818;
+    --text-color2: rgb(40, 40, 40);
+    --text-color3: #8496a0;
+
+    --border-color: rgba(179, 179, 179, 0.8);
+  }
+
+  html[data-theme="dark"] {
+    --bg-color1: rgb(22, 22, 22);
+    --bg-color2: rgb(30, 30, 30);
+    --bg-color2-opacity: rgb(30, 30, 30, 0.7);
+    --bg-color1-opacity: rgb(13, 13, 13, 0.7);
+    --shadow: rgba(0, 0, 0, 0.25);
+
+    --text-color1: rgb(230, 230, 230);
+    --text-color2: rgb(200, 200, 200);
+    --text-color3: rgb(150, 150, 150);
+
+    --border-color: rgba(218, 218, 218, 0.08);
+  }
+  html,
+  body {
+    font-family: system-ui, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    color: var(--text-color1);
+    background-color: var(--bg-color1);
+    font-size: 17px;
+    transition: background-color 0.3s;
+  }
+  * {
+    box-sizing: border-box;
+  }
+</style>

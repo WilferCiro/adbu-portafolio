@@ -1,0 +1,114 @@
+<section>
+  <h2>Mi experiencia laboral</h2>
+
+  <div class="project-list">
+    <div class="project">
+      <img src="/img/adela-bustamante.jpeg" alt="Proyecto X" />
+      <div class="project-body">
+        <div>
+          <header>Copy de no sé qué cosa</header>
+          <footer>Conoce más del proyecto</footer>
+        </div>
+        <div class="date">12 abr, 2022</div>
+      </div>
+    </div>
+    <div class="project">
+      <img src="/img/adela-bustamante.jpeg" alt="Proyecto X" />
+      <div class="project-body">
+        <div>
+          <header>Copy de no sé qué cosa</header>
+          <footer>Conoce más del proyecto</footer>
+        </div>
+        <div class="date">12 abr, 2022</div>
+      </div>
+    </div>
+    <div class="project">
+      <img src="/img/adela-bustamante.jpeg" alt="Proyecto X" />
+      <div class="project-body">
+        <div>
+          <header>Copy de no sé qué cosa</header>
+          <footer>Conoce más del proyecto</footer>
+        </div>
+        <div class="date date-active">12 abr, 2022 <label>Nuevo</label></div>
+      </div>
+    </div>
+    <div class="project">
+      <img src="/img/adela-bustamante.jpeg" alt="Proyecto X" />
+      <div class="project-body">
+        <div>
+          <header>Copy de no sé qué cosa</header>
+          <footer>Conoce más del proyecto</footer>
+        </div>
+        <div class="date">12 abr, 2022</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  h2 {
+    color: var(--primary-color);
+  }
+
+  .project-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 10px 10px;
+    border-bottom: 0.5px solid var(--text-color3);
+  }
+  .project:hover {
+    background-color: var(--bg-color2);
+    cursor: pointer;
+  }
+  .project img {
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+  }
+  .project header {
+    font-weight: 600;
+    color: var(--text-color1);
+    margin-bottom: 2px;
+    font-size: 18px;
+  }
+  .project footer {
+    color: var(--text-color3);
+    font-size: 16px;
+  }
+  .project-body {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 12px 0px;
+  }
+  .date {
+    font-size: 13px;
+    color: var(--text-color3);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+  }
+  .date label {
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    display: block;
+    color: white;
+    width: fit-content;
+    padding: 3px 5px;
+  }
+  .date-active {
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+</style>
