@@ -16,7 +16,8 @@ import SocialLinks from "../atoms/SocialLinks.astro";
         <IconUser />
       </label>
       <div class="info">
-        <label>Nombre</label>Adela Bustamante Alarcón
+        <label>¡Hola! soy</label>
+        <p>Adela Bustamante Alarcón</p>
         <label> Hola soy un cheeto y me gusta el helado y Odio a Wilfer</label>
       </div>
     </li>
@@ -24,7 +25,7 @@ import SocialLinks from "../atoms/SocialLinks.astro";
       <label class="icon"> <IconInfo /></label>
       <div class="info">
         <label>Info.</label>
-        Asistente de Marketing
+        <p>Asistente de Marketing</p>
       </div>
     </li>
     <li>
@@ -51,7 +52,7 @@ import SocialLinks from "../atoms/SocialLinks.astro";
   }
   #personal-data li {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     align-items: center;
     margin-bottom: 15px;
     color: var(--text-color1);
@@ -64,5 +65,14 @@ import SocialLinks from "../atoms/SocialLinks.astro";
     color: var(--text-color3);
     font-size: 13px;
     display: block;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  p {
+    margin: 0px;
+    padding: 0px;
   }
 </style>

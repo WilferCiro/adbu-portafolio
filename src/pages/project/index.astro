@@ -1,0 +1,120 @@
+---
+import Layout from "../../presentation/layouts/MainLayout.astro";
+import IconLeft from "../../presentation/components/atoms/icons/IconLeft.astro";
+---
+
+<Layout title="Adela Bustamante :: Proyecto X">
+  <main>
+    <header>
+      <a href="/">
+        <IconLeft />
+      </a>
+      <img
+        src="/img/projects.jpeg"
+        alt="Proyecto X"
+        transition:name="project1-image"
+        class="principal-img"
+      />
+      <div>
+        <h1 transition:name="project1-title">Proyecto X</h1>
+        <h2 transition:name="project1-date">21 abril, 2023</h2>
+      </div>
+    </header>
+
+    <p class="user-chat">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.
+      <label class="date">21 abril, 2023</label>
+    </p>
+
+    <div class="user-chat">
+      <img
+        class="image-chat"
+        src="/img/projects.jpeg"
+        alt="foto del proyecto"
+      />
+      <label class="date">21 abril, 2023</label>
+    </div>
+
+    <p class="own-chat">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.
+    </p>
+  </main>
+</Layout>
+
+<style>
+  main {
+    max-width: var(--max-width);
+    width: 100%;
+    margin: auto;
+  }
+  h1 {
+    padding: 0px;
+    margin: 0px;
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
+  }
+  h2 {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    font-weight: 400;
+    font-size: 12px;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 5px 10px;
+  }
+  header a {
+    color: white;
+  }
+  .principal-img {
+    border-radius: 100%;
+    width: 50px;
+  }
+
+  .own-chat {
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    width: 90%;
+    margin-right: 10%;
+    margin-bottom: 5px;
+  }
+  .user-chat {
+    background-color: var(--chat-color);
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    width: 90%;
+    margin-left: 10%;
+    margin-bottom: 5px;
+  }
+  .image-chat {
+    width: 100%;
+    border-radius: var(--border-radius);
+  }
+  .date {
+    font-weight: 400;
+    font-size: 13px;
+    color: var(--text-color3);
+    text-align: right;
+    display: block;
+  }
+</style>
