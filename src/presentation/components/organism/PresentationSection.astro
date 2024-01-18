@@ -18,7 +18,7 @@ import SocialLinks from "../atoms/SocialLinks.astro";
       <div class="info">
         <label>¡Hola! soy</label>
         <p>Adela Bustamante Alarcón</p>
-        <label> Hola soy un cheeto y me gusta el helado y Odio a Wilfer</label>
+        <label>Conexiones humanas auténticas.</label>
       </div>
     </li>
     <li>
@@ -29,6 +29,13 @@ import SocialLinks from "../atoms/SocialLinks.astro";
       </div>
     </li>
     <li>
+      <label class="icon"> <IconInfo /></label>
+      <div class="info">
+        <label>Info.</label>
+        <p>Asistente de Marketing</p>
+      </div>
+    </li>
+    <li class="social-links">
       <SocialLinks />
     </li>
   </ul>
@@ -37,24 +44,30 @@ import SocialLinks from "../atoms/SocialLinks.astro";
 <style>
   section {
     padding: 30px 20px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   #primary-image {
     width: 250px;
     height: 250px;
     border-radius: 100%;
     display: block;
-    margin: auto;
+    margin: 20px auto;
   }
 
   #personal-data {
     list-style: none;
     padding: 0px;
+    width: 100%;
   }
   #personal-data li {
     display: flex;
     gap: 15px;
     align-items: flex-start;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     color: var(--text-color1);
   }
   #personal-data li .icon {
@@ -74,5 +87,10 @@ import SocialLinks from "../atoms/SocialLinks.astro";
   p {
     margin: 0px;
     padding: 0px;
+  }
+
+  .social-links {
+    border-top: 1px solid var(--border-color);
+    padding-top: 25px;
   }
 </style>
