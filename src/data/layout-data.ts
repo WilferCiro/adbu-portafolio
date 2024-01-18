@@ -1,14 +1,14 @@
 export const layoutData = {
   es: {
     description:
-      "Soy un apasionado desarrollador fullstack con experiencia en tecnologías web modernas. Me encanta crear aplicaciones web innovadoras y soluciones tecnológicas para problemas complejos",
+      "Soy Adela y me gustan los gatos",
     keywords:
-      "Wilfer Daniel Ciro Maya, desarrollador, desarrollador fullstack, portafolio, sobre mi, nodejs, react, python",
+      "Adela Bustamante Alarcón, asistente de marketing, quindío, risaralda, pereira, publicidad, contrato, portafolio, mujer, emprendimiento",
   },
   en: {
     description:
-      "I am a passionate fullstack developer with experience in modern web technologies. I love creating innovative web applications and technological solutions for complex problems",
+      "Soy Adela y me gustan los gatos",
     keywords:
-      "Wilfer Daniel Ciro Maya, developer, fullstack developer, portfolio, about me, nodejs, python, react",
+      "Adela Bustamante Alarcón, asistente de marketing, quindío, risaralda, pereira, publicidad, contrato, portafolio, mujer, emprendimiento",
   },
 } as const;
