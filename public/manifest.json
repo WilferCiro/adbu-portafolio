@@ -1,0 +1,75 @@
+{
+    "name": "Adela Bustamante -- Portafolio",
+    "short_name": "Adela Bustamante",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#1e8d7d",
+    "theme_color": "#1e8d7d",
+    "description": "Bienvenid@ al portafolio personal de Adela Bustamante Alarcón -- Asistente de marketing",
+    "icons": [
+      {
+        "src": "./favicon-16x16.png",
+        "sizes": "16x16",
+        "type": "image/png"
+      },
+      {
+        "src": "./favicon-32x32.png",
+        "sizes": "32x32",
+        "type": "image/png"
+      },
+      {
+        "src": "./apple-touch-icon.png",
+        "sizes": "180x180",
+        "type": "image/png"
+      },
+      {
+        "src": "./android-chrome-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "./android-chrome-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "./screenshots/screenshot-540x720-1.jpg",
+        "type": "image/jpg",
+        "sizes": "538x718",
+        "form_factor": "narrow"
+      },
+      {
+        "src": "./screenshots/screenshot-540x720-2.jpg",
+        "type": "image/jpeg",
+        "sizes": "538x718",
+        "form_factor": "narrow"
+      },
+      {
+        "src": "./screenshots/screenshot-540x720-3.jpg",
+        "type": "image/jpeg",
+        "sizes": "538x718",
+        "form_factor": "narrow"
+      },
+      {
+        "src": "./screenshots/screenshot-1024x665-1.jpg",
+        "type": "image/jpg",
+        "sizes": "1024x665",
+        "form_factor": "wide"
+      },
+      {
+        "src": "./screenshots/screenshot-1024x665-2.jpg",
+        "type": "image/jpg",
+        "sizes": "1024x665",
+        "form_factor": "wide"
+      },
+      {
+        "src": "./screenshots/screenshot-1024x665-3.jpg",
+        "type": "image/jpg",
+        "sizes": "1024x665",
+        "form_factor": "wide"
+      }
+    ],
+    "categories": ["blog", "portafolio", "education"]
+  }

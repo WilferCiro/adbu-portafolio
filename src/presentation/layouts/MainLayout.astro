@@ -3,21 +3,53 @@ import CustomHeader from "../components/molecules/CustomHeader.astro";
 import CustomFooter from "../components/molecules/CustomFooter.astro";
 import { ViewTransitions } from "astro:transitions";
 import "@fontsource-variable/montserrat";
+import { layoutData } from "../../data/layout-data";
 
 interface Props {
   title: string;
+  description?: string;
+  keywords?: string;
+  image?: string;
 }
 
+const layoutD = layoutData['es'];
 const { title } = Astro.props;
+const image =
+  "https://wilciro.vercel.app" + (Astro.props.image || "/img/adela-bustamante-data.jpg");
+const description = Astro.props.description || layoutD.description;
+const keywords = Astro.props.keywords || layoutD.keywords;
+
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="keywords" content={keywords} />
+    <meta name="theme-color" content="#082a3a" />
+    <meta name="author" content="Adela Bustamante Alarcón" />
+
+    <title>Adela Bustamante — {title}</title>
+    <meta name="title" content={`Adela Bustamante — ${title}`} />
+    <meta name="description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://adebu.vercel.app/" />
+    <meta property="og:title" content={`Adela Bustamante — ${title}`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://adebu.vercel.app/" />
+    <meta property="twitter:title" content={`Adela Bustamante — ${title}`} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={image} />
+
+    <link rel="manifest" href="/manifest.json" />
+
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <ViewTransitions />
