@@ -1,55 +1,38 @@
+---
+import { workList } from "../../../data/work";
+import DatesArray from "../atoms/DatesArray.astro";
+---
+
 <section>
   <h2>Mi experiencia laboral</h2>
 
   <div class="project-list">
-    <a href="/project">
-      <div class="project">
-        <img
-          src="/img/projects.jpeg"
-          alt="Proyecto X"
-          transition:name="project1-image"
-        />
-        <div class="project-body">
-          <div>
-            <header transition:name="project1-title">
-              Copy de no sé qué cosa
-            </header>
-            <footer>Conoce más del proyecto</footer>
-          </div>
-          <div class="date" transition:name="project1-date">12 abr, 2022</div>
-        </div>
-      </div>
-    </a>
-    <div class="project">
-      <img src="/img/projects.jpeg" alt="Proyecto X" />
-      <div class="project-body">
-        <div>
-          <header>Copy de no sé qué cosa</header>
-          <footer>Conoce más del proyecto</footer>
-        </div>
-        <div class="date">12 abr, 2022</div>
-      </div>
-    </div>
-    <div class="project">
-      <img src="/img/projects.jpeg" alt="Proyecto X" />
-      <div class="project-body">
-        <div>
-          <header>Copy de no sé qué cosa</header>
-          <footer>Conoce más del proyecto</footer>
-        </div>
-        <div class="date date-active">12 abr, 2022 <label>Nuevo</label></div>
-      </div>
-    </div>
-    <div class="project">
-      <img src="/img/projects.jpeg" alt="Proyecto X" />
-      <div class="project-body">
-        <div>
-          <header>Copy de no sé qué cosa</header>
-          <footer>Conoce más del proyecto</footer>
-        </div>
-        <div class="date">12 abr, 2022</div>
-      </div>
-    </div>
+    {
+      workList.map((project) => {
+        return (
+          <a href="/project">
+            <div class="project">
+              <img
+                src="/img/projects.jpeg"
+                alt="Proyecto X"
+                transition:name="project1-image"
+              />
+              <div class="project-body">
+                <div>
+                  <header transition:name="project1-title">
+                    {project.position.es}
+                  </header>
+                  <footer>{project.company.name}</footer>
+                </div>
+                <div class="date" transition:name="project1-date">
+                  <DatesArray dates={project.dates} />
+                </div>
+              </div>
+            </div>
+          </a>
+        );
+      })
+    }
   </div>
 </section>
 
@@ -106,6 +89,8 @@
     flex-direction: column;
     align-items: flex-end;
     gap: 4px;
+    text-align: right;
+    width: 39%;
   }
   .date label {
     background-color: var(--primary-color);

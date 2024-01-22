@@ -1,0 +1,37 @@
+---
+// import { getLangFromUrl, useTranslations } from "../../../data/i18n/utils";
+
+// const lang = getLangFromUrl(Astro.url);
+// const t = useTranslations(lang);
+interface Props {
+  dates: (string | Date)[];
+  color?: string;
+}
+const { dates, color } = Astro.props;
+---
+
+<p>
+  {
+    dates
+      .map((date) =>
+        typeof date === "string"
+          ? date === "present"
+            ? "Presente"
+            : date
+          : `${date.toLocaleString("es", {
+              month: "short",
+            })}, ${date.getFullYear()}`
+      )
+      .join(" - ")
+  }
+</p>
+
+<style define:vars={{ color: color || "var(--text-color2)" }}>
+  p {
+    margin: 0px;
+    font-size: 13px;
+    font-weight: 200;
+    display: flex;
+    gap: 6px;
+  }
+</style>
