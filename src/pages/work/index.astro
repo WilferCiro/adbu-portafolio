@@ -1,0 +1,117 @@
+---
+import Layout from "../../presentation/layouts/MainLayout.astro";
+import IconLeft from "../../presentation/components/atoms/icons/IconLeft.astro";
+
+import { workList } from "../../data/work";
+import DatesArray from "../../presentation/components/atoms/DatesArray.astro";
+---
+
+<Layout title="Adela Bustamante :: Proyecto X">
+  <main>
+    <header>
+      <a href="/">
+        <IconLeft />
+      </a>
+      <img
+        src={`/img/works/${workList[0].company.image}`}
+        alt="Proyecto X"
+        transition:name="project1-image"
+        class="principal-img"
+      />
+      <div>
+        <h1 transition:name="project1-title">{workList[0].position.es}</h1>
+        <h2 transition:name="project1-date">{workList[0].company.name}</h2>
+      </div>
+    </header>
+    <nav>
+      <h2>Mi trabajo</h2>
+      <div class="items">
+        <div>
+          <img src="/img/projects.jpeg" alt="Proyecto X" />
+        </div>
+        <div>
+          <img src="/img/projects.jpeg" transition:name="project1-image" />
+        </div>
+        <div>
+          <img src="/img/projects.jpeg" alt="Proyecto X" />
+        </div>
+      </div>
+    </nav>
+    <nav>
+      <ul>
+        {
+          workList[0].description.es.map((desc) => {
+            return <li>{desc}</li>;
+          })
+        }
+      </ul>
+    </nav>
+  </main>
+</Layout>
+
+<style>
+  main {
+    max-width: var(--max-width);
+    width: 100%;
+    margin: auto;
+  }
+  h1 {
+    padding: 0px;
+    margin: 0px;
+    font-size: x-large;
+    font-weight: 400;
+  }
+  h2 {
+    margin: 0px;
+    padding: 0px;
+    font-weight: 400;
+    font-size: small;
+    color: var(--text-color2);
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    width: 100%;
+    padding: 5px 10px;
+    position: relative;
+    background-color: var(--bg-color2);
+    padding: 10px;
+    border-radius: 10px;
+  }
+  header a {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+  .principal-img {
+    border-radius: 100%;
+    width: 150px;
+  }
+  .dates {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  nav {
+    margin-top: 10px;
+    background-color: var(--bg-color2);
+    padding: 10px;
+    border-radius: 10px;
+  }
+  nav .items {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+  nav h2 {
+    margin-bottom: 10px;
+  }
+  nav img {
+    width: 100%;
+    border-radius: 20px;
+  }
+</style>
