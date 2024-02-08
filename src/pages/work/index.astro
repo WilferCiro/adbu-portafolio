@@ -24,20 +24,7 @@ import DatesArray from "../../presentation/components/atoms/DatesArray.astro";
       </div>
     </header>
     <nav>
-      <h2>Mi trabajo</h2>
-      <div class="items">
-        <div>
-          <img src="/img/projects.jpeg" alt="Proyecto X" />
-        </div>
-        <div>
-          <img src="/img/projects.jpeg" transition:name="project1-image" />
-        </div>
-        <div>
-          <img src="/img/projects.jpeg" alt="Proyecto X" />
-        </div>
-      </div>
-    </nav>
-    <nav>
+      <h3>Responsabilidades</h3>
       <ul>
         {
           workList[0].description.es.map((desc) => {
@@ -46,6 +33,17 @@ import DatesArray from "../../presentation/components/atoms/DatesArray.astro";
         }
       </ul>
     </nav>
+    <ul class="items">
+      <li>
+        Copys rrss
+      </li>
+      <li>
+        Copys Email Marketing
+      </li>
+      <li>
+        Posts rrss
+      </li>
+    </ul>
   </main>
 </Layout>
 
@@ -78,7 +76,6 @@ import DatesArray from "../../presentation/components/atoms/DatesArray.astro";
     width: 100%;
     padding: 5px 10px;
     position: relative;
-    background-color: var(--bg-color2);
     padding: 10px;
     border-radius: 10px;
   }
@@ -102,10 +99,23 @@ import DatesArray from "../../presentation/components/atoms/DatesArray.astro";
     padding: 10px;
     border-radius: 10px;
   }
-  nav .items {
+  .items {
     display: flex;
     align-items: center;
     gap: 2px;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 20px;
+    li {
+      background-color: gray;
+      width: 100%;
+      height: 50px;
+      padding: 10px 15px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
   }
   nav h2 {
     margin-bottom: 10px;
